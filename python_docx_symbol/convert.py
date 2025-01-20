@@ -85,7 +85,7 @@ class ConversionResult:
   def add_converted(self, char: str):
     self._converted.add(char)
 
-def convert_symbol_char(
+def convert_symbols(
   doc: Document,
   font_name: str = 'Arial',
   additional_symbol_map: Dict[str, str] = {},

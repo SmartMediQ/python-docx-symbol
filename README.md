@@ -10,10 +10,10 @@ Convert docx Symbol characters to unicode characters.
 
 ```python
 from docx import Document
-from python_docx_symbol import convert_symbol_char
+from python_docx_symbol import convert_symbols
 
 doc = Document("/path/to/input.docx")
-result = convert_symbol_char(doc)
+result = convert_symbols(doc)
 print(result.converted)
 print(result.unconverted)
 

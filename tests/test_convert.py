@@ -3,7 +3,7 @@ import os
 
 from docx import Document
 from python_docx_symbol import (
-  convert_symbol_char,
+  convert_symbols,
   ConversionResult,
 )
 
@@ -14,7 +14,7 @@ def test_convert():
     protected_data_dir, "sample.docx"
   ))
   
-  result: ConversionResult = convert_symbol_char(doc)
+  result: ConversionResult = convert_symbols(doc)
   print(result.converted)
   print(result.unconverted)
   

@@ -1,3 +1,3 @@
-from .convert import convert_symbol_char, ConversionResult
+from .convert import convert_symbols, ConversionResult
 
-__all__ = ['convert_symbol_char', 'ConversionResult']
+__all__ = ['convert_symbols', 'ConversionResult']
