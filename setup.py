@@ -5,7 +5,7 @@ with open("README.md", "r") as fp:
 
 setup(
   name="python-docx-symbol",
-  version="0.1.1",
+  version="0.1.2",
   author="Smartmediq",
   author_email="dev@smartmediq.com",
   description="Convert docx Symbol characters to unicode characters.",

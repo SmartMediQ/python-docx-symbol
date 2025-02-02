@@ -96,6 +96,7 @@ def convert_symbols(
   result = ConversionResult()
   
   def _process_paragraph(para: Paragraph):
+    previous_font_name = None
     for run in para.runs:
       if run.font.name == 'Symbol':
         is_ok = True
@@ -112,7 +113,12 @@ def convert_symbols(
             result.add_unconverted(ch)
         run.text = ''.join(text_list)
         if is_ok:
-          run.font.name = font_name
+          if previous_font_name and previous_font_name != 'Symbol':
+            run.font.name = previous_font_name
+          else:
+            run.font.name = font_name
+      else:
+        previous_font_name = run.font.name
   
   for para in doc.paragraphs:
     _process_paragraph(para)
